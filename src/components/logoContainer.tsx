@@ -1,0 +1,9 @@
+import { Link } from "react-router"
+
+export const LogoContainer = () => {
+    return (
+        <Link to="/">
+            <img src="/assets/svg/logo.svg" alt="Interview.io"  className="min-w-10 min-h-10 object-contain"/>
+        </Link>
+    )
+}
