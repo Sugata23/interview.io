@@ -6,6 +6,7 @@ import { NavLink } from "react-router";
 import { LogoContainer } from "./logoContainer";
 import { NavigationRoutes } from "./navigationRoutes";
 import { ProfileContainer } from "./profileContainer";
+import { ToggleContainer } from "./toggleContainer";
 
 const Header = () => {
   const { userId } = useAuth();
@@ -40,7 +41,7 @@ const Header = () => {
             <ProfileContainer />
 
             {/* mobile toggle section */}
-            {/* <ToggleContainer /> */}
+            <ToggleContainer />
           </div>
 
         </div>
