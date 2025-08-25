@@ -52,10 +52,10 @@ const formSchema = z.object({
 type FormData = z.infer<typeof formSchema>;
 
 export const FormMockInterview = ({ initialData }: FormMockInterviewProps) => {
-    const form = useForm<FormData>({
+    const form = useForm({
         resolver: zodResolver(formSchema),
         defaultValues: initialData || {},
-    });
+    }) as ReturnType<typeof useForm<FormData>>;
 
     const { isValid, isSubmitting } = form.formState;
     const [loading, setLoading] = useState(false);
